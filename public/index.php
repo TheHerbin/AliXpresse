@@ -6,7 +6,7 @@ require_once '../config/routes.php';
 require_once '../src/controleur/_controleurs.php';
 
 $loader = new \Twig\Loader\FilesystemLoader('../src/vue/');
-$twig = $twig = new \Twig\Environment($loader, []);
+$twig = new \Twig\Environment($loader, []);
 
 $contenu=getPage();
 $contenu($twig);

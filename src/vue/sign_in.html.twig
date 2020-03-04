@@ -4,38 +4,50 @@
 
 
  <div class="container">
-        <form>
+        <form method="post" action="index.php?page=sign_in">
           <div class="form-group">
             <label for="exampleInputEmail1">Adresse mail</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nom@example.com">
-            <small id="emailHelp" class="form-text text-muted">tkt frr on garde tes données que pour nous , on partage pas avec la plèbe</small>
+
+            <input type="email" class="form-control" name="Remail" aria-describedby="emailHelp" placeholder="nom@exemple.com">
+
+
+            <small name="blague" class="form-text text-muted">tkt frr on garde tes données que pour nous , on partage pas avec la plèbe</small>
           </div>
           
           <div>
-            <label for="exampleInputPassword1">Prénom</label>
-            <input type="firstname" class="form-control" id="prénom" placeholder="Kévin">
+            <label for="AidePrénom">Prénom</label>
+            <input type="text" class="form-control" name="prénom" placeholder="Kévin">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Date de naissance</label>
-            <input type="number" class="form-control" id="datenaissance" placeholder="01/01/0001">
+            <label for="AideDate">Date de naissance</label>
+            <input type="date" class="form-control" name="datenaissance" placeholder="01/01/0001">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">téléphone</label>
-            <input type="number" class="form-control" id="tel" placeholder="068564642">
+            <label for="AideTel">téléphone</label>
+            <input type="text" class="form-control" name="tel" placeholder="068564642">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Ville</label>
-            <input type="text" class="form-control" id="Ville" placeholder="Trifoullis-les-Chausettes">
+            <label for="AideVille">Ville</label>
+            <input type="text" class="form-control" name="Ville" placeholder="Trifoullis-les-Chausettes">
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Code Postal</label>
-            <input type="number" class="form-control" id="datenaissance" placeholder="62165">
+            <label for="AideCP">Code Postal</label>
+            <input type="number" class="form-control" name="CodePostal" placeholder="62165">
           </div>
 
+               <div class="form-group">
+            <label for="AideMdp1">Mot de passe</label>
+            <input type="password" class="form-control" name="Mdp1">
+          </div>
+               <div class="form-group">
+            <label for="AideMdp2">Confirmation du Mot de passe</label>
+            <input type="password" class="form-control" name="Mdp2">
+          </div>
+          
           <button type="submit" class="btn btn-primary">Créer un compte</button>
         </form>
       </div>
