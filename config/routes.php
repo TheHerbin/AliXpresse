@@ -1,9 +1,12 @@
 <?php
-Function getPage(){
+Function getPage($db){
 
     $lesPages['accueil']="accueilControleur";
     $lesPages['connect']= "connectControleur";
     $lesPages['sign_in']= "sign_inControleur";
+    $lesPages['maintenance']= "maintenanceControleur";
+    
+    if($db!=NULL){
 
     if(isset($_GET['page'])){
         $page = $_GET['page'];
@@ -23,5 +26,10 @@ Function getPage(){
     }
 
     return $contenu;
+}else{
+    return $lesPages['maintenance'];
+}
+
+
 }
 ?>
