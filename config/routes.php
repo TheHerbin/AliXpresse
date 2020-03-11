@@ -4,6 +4,7 @@ Function getPage($db){
     $lesPages['accueil']="accueilControleur";
     $lesPages['connect']= "connectControleur";
     $lesPages['sign_in']= "sign_inControleur";
+    $lesPages['intervention']="interventionControleur";
     $lesPages['maintenance']= "maintenanceControleur";
     
     if($db!=NULL){

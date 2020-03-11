@@ -34,6 +34,11 @@ Function sign_inControleur($twig,$db){
     echo $twig->render('sign_in.html.twig', array('form'=>$form));
 }
 
+Function interventionControleur($twig){
+    var_dump($_POST);
+    echo $twig->render('intervention.html.twig',array());
+}
+
 Function maintenanceControleur($twig){
     
     echo $twig->render('maintenance.html.twig',array());
