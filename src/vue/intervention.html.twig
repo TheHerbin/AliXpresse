@@ -3,23 +3,34 @@
 {% block contenu %}
 
 
+{% if form.valide is defined %} 
+{% if form.valide == true %}
+<h1>Demande réussie</h1>
+<h1>Voici votre nom :  {{form.Nom}}</h1>
+<h1>Voici votre Sujet :  {{form.Sujet}}</h1>
+<h1>Voici votre message  : {{form.Message}}</h1>
+{% endif %} 
+
+{% else %} 
+
+
      <div class="container">
-<form method="post" action="index.php?page=intervention">
+<form method="post" action="index.php?page=intervention" enctype="application/x-www-form-urlencoded">
   <div class="form-group">
     <label for="formGroupExampleInput">Nom</label>
-    <input type="text" class="form-control" id="nom" placeholder="nom ici">
+    <input type="text" class="form-control" name="InputNom"  placeholder="nom ici">
   </div>
   <div class="form-group">
     <label for="formGroupExampleInput2">Sujet</label>
-    <input type="text" class="form-control" id="sujet" placeholder="Sujet ici ">
+    <input type="text" class="form-control" name="InputSujet" placeholder="Sujet ici ">
   </div>
   <div class="form-group">
     <label for="formGroupExampleInput2">Message</label>
-    <input type="text" class="form-control" id="message" placeholder="message ici  ">
+    <input type="text" class="form-control" name="InputMessage"  placeholder="message ici  ">
   </div>
 
    <div>
-          <button name="btInscrire" type="submit" class="btn btn-primary">Envoyer</button>
+          <button name="btValider" type="submit" class="btn btn-primary">Envoyer</button>
         </form>
       </div>
 </form>
@@ -27,5 +38,6 @@
 
 
 
+{% endif %}
 
 {% endblock %}

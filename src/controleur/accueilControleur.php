@@ -35,13 +35,25 @@ Function sign_inControleur($twig,$db){
 }
 
 Function interventionControleur($twig){
-    var_dump($_POST);
-    echo $twig->render('intervention.html.twig',array());
+    $form = array();
+    if (isset($_POST['btValider'])){
+        $inputNom = $_POST['InputNom'];   
+        $inputSujet = $_POST['InputSujet'];
+        $inputMessage = $_POST['InputMessage'];
+
+
+                      $form['valide'] = true;
+                      $form['Nom'] = $inputNom; 
+                      $form['Sujet'] = $inputSujet;  
+                      $form['Message'] = $inputMessage;
+                      
+                            }
+    echo $twig->render('intervention.html.twig',array('form'=>$form));
 }
 
 Function maintenanceControleur($twig){
     
-    echo $twig->render('maintenance.html.twig',array());
+    echo $twig->render('maintenance.html.twig',array('form'=>$form));
 }
 
 ?>
