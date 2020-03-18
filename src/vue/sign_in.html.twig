@@ -14,9 +14,68 @@
 {% endif %}
 
 {% else %} 
-  <h1> Echec de l'inscription</h1>
-  <h1>Erreur : {{form.message}}</h1>
-  <h2><a href="index.php?page=sign_in">Retourner au formulaire d'inscription</a></h2>
+<div class="container">
+        <form method="post" action="index.php?page=sign_in">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Adresse mail</label>
+
+            <input type="email" class="form-control" name="inputEmail" aria-describedby="emailHelp" placeholder="nom@exemple.com">
+
+
+            <small name="blague" class="form-text text-muted">tkt frr on garde tes données que pour nous , on partage pas avec la plèbe</small>
+          </div>
+          
+          <div class="form-group">
+            <label for="AidePrénom">Prénom</label>
+            <input type="text" class="form-control" name="prenom" placeholder="Kévin">
+          </div>
+
+           <div class="form-group">
+            <label for="AideNom">Nom</label>
+            <input type="text" class="form-control" name="nom" placeholder="Dupon">
+          </div>
+
+          <div class="form-group">
+            <label for="AideTel">téléphone</label>
+            <input type="text" class="form-control" name="tel" placeholder="068564642">
+          </div>
+
+          <div class="form-group">
+            <label for="AideVille">Ville</label>
+            <input type="text" class="form-control" name="Ville" placeholder="Trifoullis-les-Chausettes">
+          </div>
+
+          <div class="form-group">
+            <label for="AideCP">Code Postal</label>
+            <input type="number" class="form-control" name="CodePostal" placeholder="62165">
+          </div>
+
+          <div class="form-group">
+    <label for="exampleFormControlSelect1">Rôle</label>
+    <select class="form-control" name="role" >
+      <option>1</option>
+      <option>2</option>
+
+    </select>
+  </div>
+
+               <div class="form-group">
+            <label for="AideMdp1">Mot de passe</label>
+            <input type="password" class="form-control" name="inputPassword">
+          </div>
+               <div class="form-group">
+            <label for="AideMdp2">Confirmation du Mot de passe</label>
+            <input type="password" class="form-control" name="inputPassword2">
+          </div>
+          
+          <div>
+          <button name="btInscrire" type="submit" class="btn btn-primary">Créer un compte</button>
+          <p> Echec de l'inscription</p>
+          <p>Erreur : {{form.message}}</p>
+        </form>
+      </div>
+ 
+  
   {% endif %}
 
   {% else %}
