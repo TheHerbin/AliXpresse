@@ -21,8 +21,8 @@ Function sign_inControleur($twig,$db){
             $form['message'] = 'Les mots de passe sont différents';
         }
         else{
-            $utilisateur = new Utilisateur($db);
-            $exec = $utilisateur->insert($inputEmail, password_hash($inputPassword, PASSWORD_DEFAULT), $nom, $prenom,$idrole);
+            $utilisateur = new utilisateur($db);
+            $exec = $utilisateur->insert($inputEmail, password_hash($inputPassword, PASSWORD_DEFAULT), $nom, $prenom,$role);
             if (!$exec){
                 $form['valide'] = false;  
                 $form['message'] = 'Problème d\'insertion dans la table utilisateur ';  
